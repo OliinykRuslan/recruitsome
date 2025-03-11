@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/css/output.css" rel="stylesheet">
+    <title>Recruitsome</title>
+</head>
+<body>
+	<!-- Site header -->
+	<header>
+		<div x-data="{showMenu : false}" class="max-w-screen-xl mx-auto px-4 xl:px-8">
+			<div class="flex items-center justify-between py-4">
+				<!-- Brand-->
+				<a href="/" class="flex w-max">
+					<svg class="h-8 w-50"><use xlink:href='#logo'/></svg>
+				</a>
+				<!-- Navigation -->
+				<nav class="hidden flex-col space-y-4 lg:space-y-0 lg:flex-row lg:flex justify-center"
+					:class="{ 'flex absolute top-16 left-0 bg-white border-b border-gray-300 dark:border-gray-60 dark:bg-dark-theme lg:dark:bg-transparent w-full py-8 z-20 lg:relative lg:top-0 lg:py-0 lg:mt-0 lg:border-0': showMenu, 'hidden': !showMenu}"
+					id="navbar-main" x-cloak
+				>
+					<ul class="flex justify-start items-start text-base px-4 grow origin-top z-10 flex-col space-y-4 lg:px-0 lg:space-y-0 lg:flex-row lg:space-x-2 lg:items-center xl:space-x-8">
+						<li><a href="/" class="text-gray-900 hover:text-rose-400 transition-colors">Home</a></li>
+						<li><a href="about.html" class="text-gray-900 hover:text-rose-400 transition-colors">About</a></li>
+						<li><a href="blog.html" class="text-gray-900 hover:text-rose-400 transition-colors">Blog</a></li>
+						<li><a href="faq.html" class="text-gray-900 hover:text-rose-400 transition-colors">FAQ</a></li>
+						<li><a href="team.html" class="text-gray-900 hover:text-rose-400 transition-colors">Team</a></li>
+					</ul>
+				</nav>
+				<div class="flex items-center sm:w-50">
+					<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+						<a href="#" class="rounded-full text-base font-semibold px-5 py-2.5 text-white bg-gray-900 hover:bg-rose-400 transition-colors">Join Waitlist</a>
+					</div>
+					<!-- Navbar Toggle Button -->
+					<button @click="showMenu = !showMenu" class="block lg:hidden z-20 cursor-pointer" type="button" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+						<svg x-show="!showMenu" class="h-4 w-6 fill-gray-500 dark:fill-white"><use xlink:href='#menu-close'/></svg>
+						<svg x-show="showMenu" class="h-5 w-6 fill-gray-500 dark:fill-white"><use xlink:href='#menu-open'/></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+</body>
+</html>
