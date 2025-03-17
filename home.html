@@ -190,6 +190,87 @@
 		</div>
 	</section>
 
+	<section class="relative bg-linear-to-t from-violet-100 bg-rose-100 mb-14 pt-8 pb-8 sm:mx-4 sm:rounded-xl md:pt-16 md:pb-32 md:mb-40 md:mx-8">
+		<div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+            <div class="grid gap-6 lg:gap-6 lg:grid-cols-2">
+                <div class="md:pt-2">
+					<div class="flex justify-center mb-4 md:mb-6 md:justify-start">
+						<p class="flex relative rounded-full px-3 text-sm/8 ring-1 ring-rose-400">Find a Solution</p>
+					</div>
+                    <h2 class="font-poppins text-3xl/11 font-semibold text-center md:text-5xl/18 sm:text-left">Frequently Asked Questions</h2>
+                </div>
+				<!-- collapse -->
+				<div class="pt-2 md:pt-4" x-data="{selected:1}">
+					<ul class="space-y-6"> 
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 1 ? selected = 1 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>How to setup an account</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 1, 'rotate-0': selected === 1}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 1, 'rotate-0': selected === 1}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 2 ? selected = 2 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>What is Recruitsome</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 2, 'rotate-0': selected === 2}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 2, 'rotate-0': selected === 2}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 3 ? selected = 3 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>How can you help my business</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 3, 'rotate-0': selected === 3}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 3, 'rotate-0': selected === 3}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 4 ? selected = 4 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>Where do you find candidates</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 4, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 4, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+            </div>
+		</div>
+	</section>
+
+	<footer class="max-w-screen-xl mx-auto py-6 px-4 md:px-8">
+		<div class="flex flex-col justify-between items-center gap-6 md:flex-row">
+			<a href="/" class="flex w-max"><svg class="h-8 w-50"><use xlink:href='#logo'/></svg></a>
+			<p class="text-sm text-gray-500">Copyright © 2024 Recruitsome, Inc</p>
+		</div>
+	</footer>
+
     <!-- svg sprite -->
     <div class="main_svg" hidden>
         <svg>
