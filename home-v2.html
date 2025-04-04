@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./src/css/output.css" rel="stylesheet">
     <title>Recruitsome</title>
 </head>
@@ -20,31 +17,127 @@
 						<svg class="h-8 w-50"><use xlink:href='#logo'/></svg>
 					</a>
 					<!-- Navigation -->
-					<nav class="hidden flex-col justify-center space-y-4 md:flex md:space-y-0 md:flex-row"
-						:class="{ 'flex absolute top-16 left-0 bg-white border-b border-gray-300 dark:border-gray-60 dark:bg-dark-theme md:dark:bg-transparent w-full py-8 z-20 md:relative md:top-0 md:py-0 md:mt-0 md:border-0': showMenu, 'hidden': !showMenu}"
+					<nav class="hidden flex-col justify-center space-y-4 lg:flex lg:space-y-0 lg:flex-row"
+						:class="{ 'flex absolute top-16 left-0 bg-white border-b border-gray-300 dark:border-gray-60 dark:bg-dark-theme lg:dark:bg-transparent w-full py-8 z-20 lg:relative lg:top-0 lg:py-0 lg:mt-0 lg:border-0': showMenu, 'hidden': !showMenu}"
 						id="navbar-main" x-cloak
 					>
-						<ul class="flex justify-start items-start text-base px-4 grow origin-top z-10 flex-col space-y-4 md:px-0 md:space-y-0 md:flex-row md:space-x-6 md:items-center xl:space-x-8">
+						<ul class="flex justify-start items-start text-base font-medium px-4 grow origin-top z-10 flex-col space-y-4 lg:px-0 lg:space-y-0 lg:flex-row lg:space-x-6 lg:items-center xl:space-x-8">
 							<li><a href="/" class="text-gray-900 hover:text-rose-400 transition-colors">Home</a></li>
 							<li><a href="about.html" class="text-gray-900 hover:text-rose-400 transition-colors">About</a></li>
 							<li><a href="blog.html" class="text-gray-900 hover:text-rose-400 transition-colors">Blog</a></li>
 							<li><a href="faq.html" class="text-gray-900 hover:text-rose-400 transition-colors">FAQ</a></li>
 							<li><a href="team.html" class="text-gray-900 hover:text-rose-400 transition-colors">Team</a></li>
+
+							<li class="w-full pt-24 space-y-2 lg:pt-0 lg:w-auto">
+								<!-- lang mobile -->
+								<div class="text-sm font-medium items-center justify-center flex sm:hidden">
+									<div
+										x-data="{ open: false }"
+										class="relative"
+									>
+										<button
+											x-on:click="open = true"
+											class="flex items-center mx-auto px-2 py-1.5 rounded-md hover:bg-gray-80 group transition-all"
+											type="button"
+										>
+											<span class="mx-1">English</span>
+											<svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+												<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+											</svg>
+										</button>
+										<ul
+											x-show="open"
+											x-on:click.away="open = false"
+											class="absolute border-t border border-white bg-white rounded shadow-lg top-full py-2 mt-1 z-20"
+										>
+											<li>
+												<a href="#" class="block hover:bg-violet-100 whitespace-no-wrap py-2 px-4 lg:px-6">
+													Spanish
+												</a>
+											</li>
+											<li>
+												<a href="#" class="block hover:bg-violet-100 whitespace-no-wrap py-2 px-4 lg:px-6">
+													France
+												</a>
+											</li>
+											<li>
+												<a href="#" class="block hover:bg-violet-100 whitespace-no-wrap py-2 px-4 lg:px-6">
+													Ukrainian
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<a href="#" class="flex items-center justify-center rounded-full text-sm font-semibold px-5 py-2 text-white border-2 border-gray-900 bg-gray-900 transition-colors hover:bg-rose-400 hover:border-rose-400 sm:hidden">Join Waitlist</a>
+					
+								<a href="#" class="flex items-center justify-center rounded-full text-sm font-semibold px-5 py-2 text-gray-900 border-2 border-gray-900 transition-color hover:text-white hover:bg-rose-400 hover:border-rose-400 sm:hidden">
+									Login
+								</a>
+
+							</li>
 						</ul>
 					</nav>
-					<div class="flex items-center lg:w-50">
-						<div class="hidden md:flex md:flex-1 md:justify-end">
-							<a href="#" class="rounded-full text-base font-semibold px-4 py-2.5 text-white bg-gray-900 hover:bg-rose-400 transition-colors md:px-5">Join Waitlist</a>
+
+					<div class="flex items-center space-x-4 lg:space-x-2">
+						<div class="text-sm font-semibold items-center hidden sm:flex xl:mr-10">
+							<div
+								x-data="{ open: false }"
+								class="relative"
+							>
+								<button
+									x-on:click="open = true"
+									class="flex items-center mx-auto px-2 py-1.5 group transition-all cursor-pointer"
+									type="button"
+								>
+									<span class="mx-1">EN</span>
+									<svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+										<path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+									</svg>
+								</button>
+								<ul
+									x-show="open"
+									x-on:click.away="open = false"
+									class="absolute border-t border border-white bg-white rounded shadow-lg top-full py-2 mt-1 z-20"
+								>
+									<li>
+										<a href="#" class="block hover:bg-violet-100 whitespace-no-wrap py-2 px-4 lg:px-6">
+											Spanish
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block hover:bg-violet-100 whitespace-no-wrap py-2 px-4 lg:px-6">
+											France
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block hover:bg-violet-100 whitespace-no-wrap py-2 px-4 lg:px-6">
+											Ukrainian
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
+
+
+						<a href="#" class="rounded-full text-base font-semibold px-5 py-2 text-white border-2 border-gray-900 bg-gray-900 transition-colors hover:bg-rose-400 hover:border-rose-400 hidden sm:flex">Join Waitlist</a>
+					
+						<a href="#" class="rounded-full text-base font-semibold px-5 py-2 text-gray-900 border-2 border-gray-900 transition-color hover:text-white hover:bg-rose-400 hover:border-rose-400 hidden sm:flex">
+							Login
+						</a>
 						<!-- Navbar Toggle Button -->
-						<button @click="showMenu = !showMenu" class="block md:hidden z-20 cursor-pointer" type="button" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+						<button @click="showMenu = !showMenu" class="block lg:hidden z-20 cursor-pointer" type="button" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
 							<svg x-show="!showMenu" class="h-4 w-6 fill-gray-900"><use xlink:href='#menu-close'/></svg>
 							<svg x-show="showMenu" class="h-5 w-6 fill-gray-900"><use xlink:href='#menu-open'/></svg>
 						</button>
+
 					</div>
+
 				</div>
 			</div>
 		</header>
+
+		
 		<div class="pt-10 px-4 sm:px-8 md:pt-16">
 			<div class="flex justify-center mb-4 sm:mt-1 sm:mb-8">
 				<p class="flex items-center relative rounded-full px-3 font-medium text-sm/8 ring-1 ring-rose-400">
