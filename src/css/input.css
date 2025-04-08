@@ -3,9 +3,38 @@
 
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Glancyr";
+    font-style: normal;
+    /* font-weight: 400; */
+    font-display: swap;
+    src: url("../fonts/Glancyr-Regular.woff2") format("woff2"),
+         url("../fonts/Glancyr-Regular.woff") format("woff"),
+         url("../fonts/Glancyr-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Glancyr-Medium";
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Glancyr-Medium.woff2") format("woff2"),
+         url("../fonts/Glancyr-Medium.woff") format("woff"),
+         url("../fonts/Glancyr-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "Glancyr-SemiBold";
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/Glancyr-SemiBold.woff2") format("woff2"),
+         url("../fonts/Glancyr-SemiBold.woff") format("woff"),
+         url("../fonts/Glancyr-SemiBold.otf") format("opentype");
+}
+
 @theme {
     --font-poppins: "Poppins", "sans-serif";
     --font-inter: "Inter", "sans-serif";
+    --font-glancyr: "Glancyr", "sans-serif";
+    --font-glancyr-medium: "Glancyr-Medium", "sans-serif";
+    --font-glancyr-semibold: "Glancyr-SemiBold", "sans-serif";
     --color-midnight: #121063;
     --color-tahiti: #3ab7bf;
     --color-bermuda: #78dcca;
