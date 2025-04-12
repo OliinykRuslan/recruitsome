@@ -342,82 +342,6 @@
 		</div>
 	</section>
 
-	<section class="relative bg-linear-to-t from-violet-100 bg-rose-100 mb-14 pt-8 pb-8 sm:mx-4 sm:rounded-xl md:pt-16 md:pb-32 md:mb-40 md:mx-8">
-		<div class="max-w-screen-xl mx-auto px-4 sm:px-8">
-            <div class="grid gap-6 lg:gap-6 lg:grid-cols-2">
-                <div class="md:pt-2">
-					<div class="flex justify-center mb-4 md:mb-6 md:justify-start">
-						<p class="flex relative rounded-full px-3 text-sm/8 ring-1 ring-rose-400">Find a Solution</p>
-					</div>
-                    <h2 class="font-poppins text-3xl/11 font-semibold text-center md:text-5xl/18 sm:text-left">Frequently Asked Questions</h2>
-                </div>
-				<!-- collapse -->
-				<div class="pt-2 md:pt-4" x-data="{selected:1}">
-					<ul class="space-y-6"> 
-						<li class="relative">
-							<button type="button" class="w-full font-medium text-xl" @click="selected !== 1 ? selected = 1 : selected = null">
-								<div class="flex items-center justify-between">
-									<span>How to setup an account</span>
-									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
-										<!-- <svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 1, 'rotate-0': selected === 1}"><use xlink:href='#minus-icon'/></svg> -->
-										<span class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] bg-gray-900 transition-transform duration-300" :class="{'rotate-0': selected !== 1, 'rotate-0': selected === 1}">
-										<!-- <svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 1, 'rotate-0': selected === 1}"><use xlink:href='#minus-icon'/></svg> -->
-										 <span class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] bg-gray-900 transition-transform duration-300" :class="{'rotate-90': selected !== 1, 'rotate-0': selected === 1}"></span>
-									</div>
-								</div>
-							</button>
-							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
-								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							</div>
-						</li>
-						<li class="relative">
-							<button type="button" class="w-full font-medium text-xl" @click="selected !== 2 ? selected = 2 : selected = null">
-								<div class="flex items-center justify-between">
-									<span>What is Recruitsome</span>
-									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
-										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 2, 'rotate-0': selected === 2}"><use xlink:href='#minus-icon'/></svg>
-										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 2, 'rotate-0': selected === 2}"><use xlink:href='#minus-icon'/></svg>
-									</div>
-								</div>
-							</button>
-							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
-								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							</div>
-						</li>
-						<li class="relative">
-							<button type="button" class="w-full font-medium text-xl" @click="selected !== 3 ? selected = 3 : selected = null">
-								<div class="flex items-center justify-between">
-									<span>How can you help my business</span>
-									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
-										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 3, 'rotate-0': selected === 3}"><use xlink:href='#minus-icon'/></svg>
-										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 3, 'rotate-0': selected === 3}"><use xlink:href='#minus-icon'/></svg>
-									</div>
-								</div>
-							</button>
-							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
-								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							</div>
-						</li>
-						<li class="relative">
-							<button type="button" class="w-full font-medium text-xl" @click="selected !== 4 ? selected = 4 : selected = null">
-								<div class="flex items-center justify-between">
-									<span>Where do you find candidates</span>
-									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
-										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 4, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
-										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 4, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
-									</div>
-								</div>
-							</button>
-							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
-								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-            </div>
-		</div>
-	</section>
-
 	<section class="mb-14 md:mb-40">
 		<div class="max-w-screen-xl mx-auto px-4 md:px-8">
 			<div class="text-center mb-10">
@@ -470,9 +394,100 @@
 		</div>
 	</section>
 
+	<section class="relative bg-stone-200 mb-14 pt-8 pb-8 sm:mx-4 sm:rounded-xl md:pt-16 md:pb-32 md:mb-40 md:mx-8">
+		<div class="max-w-screen-xl mx-auto px-4 sm:px-8">
+            <div class="grid gap-6 lg:gap-6 lg:grid-cols-2">
+				<div class="text-center mb-10 md:text-left">
+					<div class="flex justify-center mb-4 md:justify-start md:mb-6 md:mt-2">
+						<p class="font-glancyr-semibold flex items-center relative rounded-full px-2.5 uppercase text-sm/8 tracking-wider ring-1 ring-rose-400">
+							<svg class="mr-2" width="20" height="20"><use xlink:href='#find-icon'/></svg>
+							Find a Solution
+						</p>
+					</div>
+					<h2 class="text-3xl/11 font-bold text-center sm:text-left md:text-5xl/14">Frequently Asked Questions</h2>
+				</div>
+				<!-- collapse -->
+				<div class="pt-2 md:pt-4" x-data="{selected:1}">
+					<ul class="space-y-6"> 
+						<li class="relative">
+							<button type="button" class="w-full text-left font-medium text-xl" @click="selected !== 1 ? selected = 1 : selected = null">
+								<div class="flex justify-between">
+									<span>Will I still maintain sufficient personal contact with candidates?</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<span class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] bg-gray-900 transition-transform duration-300" :class="{'rotate-0': selected !== 1, 'rotate-0': selected === 1}">
+										 <span class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] bg-gray-900 transition-transform duration-300" :class="{'rotate-90': selected !== 1, 'rotate-0': selected === 1}"></span>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Certainly. Recruitsome only automates repetitive administrative tasks. You remain fully in control of conversations and decisions. Thanks to automation, every candidate receives fast, consistent, and personal contact, leading to higher satisfaction and better reviews.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 2 ? selected = 2 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>What about privacy and security?</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 2, 'rotate-0': selected === 2}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 2, 'rotate-0': selected === 2}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 3 ? selected = 3 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>Is Recruitsome also an ATS?</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 3, 'rotate-0': selected === 3}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 3, 'rotate-0': selected === 3}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 4 ? selected = 4 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>How much does Recruitsome cost?</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 4, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 4, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+						<li class="relative">
+							<button type="button" class="w-full font-medium text-xl" @click="selected !== 5 ? selected = 5 : selected = null">
+								<div class="flex items-center justify-between">
+									<span>When can I start?</span>
+									<div class="relative w-11 h-8 border border-gray-900/20 rounded-full cursor-pointer">
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-0': selected !== 5, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
+										<svg class="absolute top-0 right-0 bottom-0 left-0 m-auto w-2.5 h-[2px] transition-transform duration-300" :class="{'rotate-90': selected !== 5, 'rotate-0': selected === 4}"><use xlink:href='#minus-icon'/></svg>
+									</div>
+								</div>
+							</button>
+							<div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''">
+								<p class="text-base/7 text-gray-500 max-w-lg pt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+            </div>
+		</div>
+	</section>
+
 	<footer class="max-w-screen-xl mx-auto py-6 px-4 md:px-8">
 		<div class="flex flex-col justify-between items-center gap-6 md:flex-row">
-			<a href="/" class="flex w-max"><svg class="h-8 w-50"><use xlink:href='#logo'/></svg></a>
+			<a href="/" class="flex w-max"><svg class="h-10 w-auto"><use xlink:href='#logo'/></svg></a>
 			<p class="text-sm text-gray-500">Copyright © 2024 Recruitsome, Inc</p>
 		</div>
 	</footer>
@@ -523,14 +538,11 @@
 				<symbol id="gallery-icon" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1.66675 4.83333V13.1667M5.00008 3.16667V14.8333M10.0001 1.5H16.6667C17.5872 1.5 18.3334 2.24619 18.3334 3.16667V14.8333C18.3334 15.7538 17.5872 16.5 16.6667 16.5H10.0001C9.07961 16.5 8.33342 15.7538 8.33342 14.8333V3.16667C8.33342 2.24619 9.07961 1.5 10.0001 1.5Z" stroke="#F05375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</symbol>	
-
 				<!-- check mark icon -->
 				<symbol id="checkmark-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19.9999 36.6667C29.2047 36.6667 36.6666 29.2048 36.6666 20C36.6666 10.7953 29.2047 3.33337 19.9999 3.33337C10.7952 3.33337 3.33325 10.7953 3.33325 20C3.33325 29.2048 10.7952 36.6667 19.9999 36.6667Z" fill="#09A92C"/>
 					<path d="M13.3333 20L17.7777 24.1667L26.6666 15.8334" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 				</symbol>
-					
-					
 				<!-- play button -->
 				<symbol id="play-button" class="fill-inherit" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M26 51.5999C40.1385 51.5999 51.6 40.1384 51.6 25.9999C51.6 11.8614 40.1385 0.399902 26 0.399902C11.8615 0.399902 0.400024 11.8614 0.400024 25.9999C0.400024 40.1384 11.8615 51.5999 26 51.5999ZM24.5751 16.9373C23.5931 16.2827 22.3306 16.2217 21.2901 16.7785C20.2496 17.3354 19.6 18.4198 19.6 19.5999V32.3999C19.6 33.5801 20.2496 34.6644 21.2901 35.2213C22.3306 35.7781 23.5931 35.7171 24.5751 35.0625L34.1751 28.6625C35.0653 28.069 35.6 27.0698 35.6 25.9999C35.6 24.93 35.0653 23.9308 34.1751 23.3373L24.5751 16.9373Z"/>
@@ -543,6 +555,11 @@
 				<symbol id="minus-icon" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C5.96046e-08 0.447715 0.447715 0 1 0L9 4.76837e-07C9.55228 5.36442e-07 10 0.447716 10 1C10 1.55229 9.55228 2 9 2L1 2C0.447715 2 0 1.55228 0 1Z" fill="#27282E"/>
 				</symbol>
+
+				<symbol id="find-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17.5 5H2.5M8.33333 10H2.5M8.33333 15H2.5M17.5 15.8334L15.9166 14.2501M16.6667 12.5C16.6667 13.8807 15.5474 15 14.1667 15C12.786 15 11.6667 13.8807 11.6667 12.5C11.6667 11.1193 12.786 10 14.1667 10C15.5474 10 16.6667 11.1193 16.6667 12.5Z" stroke="#F05375" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</symbol>
+					
             </defs>
         </svg>
     </div>
